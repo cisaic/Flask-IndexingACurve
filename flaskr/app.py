@@ -1,15 +1,16 @@
-from flask import Flask, render_template, url_for, request, redirect
-from curve-index import hilbert_index
-
+from flask import Flask, render_template, request
+import draw_curve as dc
 
 app = Flask(__name__)
 
 
+# TODO: Add clear function
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
-        expression = request.form['sequence']
-        return render_template('index.html', result=expression)
+        sequence = request.form['sequence']
+        result = dc.draw_curve(sequence)
+        return render_template('index.html', result=result)
     else:
         return render_template('index.html')
 

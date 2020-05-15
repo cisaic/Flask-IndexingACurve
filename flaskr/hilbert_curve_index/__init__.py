@@ -1,6 +1,4 @@
 import numpy as np
-from numpy import vstack
-import string
 
 
 def hilbert_index(seq):
@@ -18,15 +16,15 @@ def hilbert_index(seq):
     index: list
         List of x,y matrix indices
     """
-    rules = {'a': np.array([0.0, 0.0]),
-             'b': np.array([0.0, 1.0]),
-             'c': np.array([1.0, 0.0]),
-             'd': np.array([1.0, 1.0])
+    rules = {'a': np.array([0, 0]),
+             'b': np.array([0, 1]),
+             'c': np.array([1, 1]),
+             'd': np.array([1, 0])
              }
     dim = 2
     index = np.array([])
 
-    for order, val in enumerate(seq[::-1]):
+    for order, val in enumerate(seq[::-1].lower()):
         if index.size == 0:
             index = np.zeros_like(rules[val])
         index += (dim ** order) * rules[val]
