@@ -40,10 +40,25 @@ Why hilbert curve and not z curve or smth? Because hilbert has locality preserva
 16. generate slider so you can see how the point approximates a location as levels increase
 - this also means I graph hilbert curve at each level up to length of sequence input
 17. plot 3d hilbert curve!!
+18. plot 3d hilbert curve with step that moves dot through sequential points
+-> using index_curve2 instead of hardcoded function
+19. try to figure out how to make color gradient follow sequential order instead of linear scale along one axis
+    - couldn't figure it out
+21. save 3d hilbert coordinates as json/csv file for easier access
+    - couldn't figure out how to save plotly JSONEncoder to json file and just read from there
+22. load plotly files directly on index page (instead of opening in new tab)
+23. start with sample 2d slider
+
 
 # TODO
 - Limit input length! 
-- Figure out do slider for 3d hilbert curve
 - search animations
-- point on nxm graph with z-curve (or some other orthant-order-sequence)
-- figure out how to get plotly graph to display on page
+- point on nxm graph with z-curve (or some other orthant-order-sequence) (?)
+- line color gradient that is sequential not along one axis
+- describe what's going on
+- generate necessary csv/json for sample graphs
+- comment code! clean up! standardize naming!!!
+- styling 
+- add 3d hilbert at order 1
+- make 2d hilbert with multiple levels on same graph
+- disable zoom on graphs so scrolling doesnt get affected

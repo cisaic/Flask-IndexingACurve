@@ -8,11 +8,26 @@
 {% endblock %}
 {% block content %}
   <h1>Indexing a space filling curve</h1>
-     <div class="chart">
-        {{ result }}
+    <div class="chart" id="step_hilbert2d">
+        <script>
+            var graphs = {{step_hilbert2d | safe}};
+            Plotly.plot('step_hilbert2d',graphs,{});
+        </script>
      </div>
   <form action="/" method="POST">
       <input type="text" name="sequence" id="sequence">
       <input type="submit" value="Generate!">
   </form>
+    <div class="chart" id="step_hilbert3d">
+        <script>
+            var graphs = {{step_hilbert3d | safe}};
+            Plotly.plot('step_hilbert3d',graphs,{});
+        </script>
+     </div>
+    <div class="chart" id="hilbert3d">
+        <script>
+            var graphs = {{hilbert3d | safe}};
+            Plotly.plot('hilbert3d',graphs,{});
+        </script>
+     </div>
 {% endblock %}

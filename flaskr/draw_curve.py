@@ -1,5 +1,7 @@
 import numpy as np
 import plotly.graph_objs as go
+import json
+import plotly
 
 from hilbert_curve_generator import HilbertCurveGenerator
 from hilbert_curve_index import hilbert_index
@@ -108,4 +110,6 @@ def draw_curve(sequence):
             scaleratio=1)
         )
 
-    fig.show()
+    graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+
+    return graphJSON

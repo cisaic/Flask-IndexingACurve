@@ -20,12 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b45c8e2-b35b-4d97-8686-acd0a00c7601" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flaskr/draw_curve.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flaskr/hilbert_curve_generator/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flaskr/draw_curve2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flaskr/hilbert-seq-L3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flaskr/hilbert3d.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flaskr/hilbert_curve_generator_3D/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flaskr/hilbert_curve_index_3D/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flaskr/hilbert_curve_index_3D/calc_index.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flaskr/hilbert_curve_index_3D/define_order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flaskr/hilbert_points.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flaskr/step_hilbert3d.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flaskr/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flaskr/curve-index.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/hilbert_curve_index/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/draw_curve.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/draw_curve.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flaskr/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flaskr/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/templates/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +69,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flaskr" />
       <recent name="$PROJECT_DIR$/flaskr/curve_index" />
       <recent name="$PROJECT_DIR$/flaskr/hilbert_curve_generator" />
     </key>
@@ -93,7 +104,8 @@
       <workItem from="1589143590570" duration="6008000" />
       <workItem from="1589225246481" duration="16506000" />
       <workItem from="1589496544413" duration="173000" />
-      <workItem from="1589496746827" duration="3532000" />
+      <workItem from="1589496746827" duration="3678000" />
+      <workItem from="1589752172691" duration="11492000" />
     </task>
     <servers />
   </component>
