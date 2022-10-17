@@ -7,27 +7,49 @@
   </style>
 {% endblock %}
 {% block content %}
-  <h1>Indexing a space filling curve</h1>
-    <div class="chart" id="step_hilbert2d">
-        <script>
-            var graphs = {{step_hilbert2d | safe}};
-            Plotly.plot('step_hilbert2d',graphs,{});
-        </script>
-     </div>
-  <form action="/" method="POST">
-      <input type="text" name="sequence" id="sequence">
-      <input type="submit" value="Generate!">
-  </form>
-    <div class="chart" id="step_hilbert3d">
-        <script>
-            var graphs = {{step_hilbert3d | safe}};
-            Plotly.plot('step_hilbert3d',graphs,{});
-        </script>
-     </div>
-    <div class="chart" id="hilbert3d">
-        <script>
-            var graphs = {{hilbert3d | safe}};
-            Plotly.plot('hilbert3d',graphs,{});
-        </script>
-     </div>
+    <div class="index-container">
+        <div class="index-left">
+        </div>
+        <div class="index-middle">
+            <div class="title">Indexing a space filling curve</div>
+            <p>This page visualizes the functions I wrote <a href="https://github.com/cisaic/Indexing-A-Space-Filling-Curve" target="_blank">(described here)</a> using Plotly to plot the position of a point on a (pseudo) space filling curve, given the orthant sequence (translating from alpha space to numeric space).
+        </p>
+            <p>Basically, given a sequence of the letters a, b, c, d (each letter corresponds with a quadrant on the x,y plane), this function plots that point in x,y coordinates.</p>
+            <p>One of the beauties of the Hilbert curve is that it preserves locality (i.e. a point at a higher "level" (ex. dcab) is very close to the point at decreasing levels (i.e. dca)).</p>
+            <p><b>Instructions:</b> To visulaize this, move the slider below to see how the sequence point corresponds at different levels of depth.</p>
+            <div class="chart" id="step_hilbert2d">
+                <script>
+                    var graphs = {{step_hilbert2d | safe}};
+                    Plotly.plot('step_hilbert2d',graphs,{});
+                </script>
+             </div>
+            <p><b>Instructions:</b> Input below your own sequence containing a combination of the quadrants a,b,c,d to generate a new point on the hilbert curve. You may not input other letters.</p>
+            <p><b>Note:</b> The quantity of letters in your sequence corresponds to the levels of "depth" in the curve. Ex. the sequence "a" corresponds to a curve level 1, the sequence "dcab" corresponds to a curve level 4, etc.</p>
+            <p>The longer your sequence, the longer it takes to generate. Please be patient & limit your sequence to a maximum length of 8. Thanks!</p>
+          <form action="/" method="POST">
+              <input type="text" name="sequence" id="sequence" placeholder="ex. abcd" minlength="1" maxlength="8" required pattern="[abcd]+">
+              <input type="submit" value="Generate!">
+          </form>
+            <div class="subtitle">3D Hilbert Curve, Depth Level 2</div>
+            <p>The code for generating the Hilbert curve itself was written by <a href="https://github.com/SubstanceIsFormAndContent">Ahmed Soliman</a> (my collaborator for the <a href="https://devpost.com/software/bounded-chaos">2019 McGill Physics hackathon</a> where this project originated.
+                I adapted Ahmed's code to generate a 3D Hilbert curve.</p>
+            <p><b>Instructions:</b> Move the slider below to move the pink point along the curve.</p>
+            <div class="chart" id="step_hilbert3d">
+                <script>
+                    var graphs = {{step_hilbert3d | safe}};
+                    Plotly.plot('step_hilbert3d',graphs,{});
+                </script>
+             </div>
+            <div class="subtitle">3D Hilbert Curve, Depth Level 3</div>
+            <p><b>Instructions:</b>At the time this was made (2020), I wasn't able to find many pretty 3D visualizations of the Hilbert curve online, so this just satisfies that desire.</p>
+            <div class="chart" id="hilbert3d">
+                <script>
+                    var graphs = {{hilbert3d | safe}};
+                    Plotly.plot('hilbert3d',graphs,{});
+                </script>
+             </div>
+            <p>This project was done without the knowledge of any existing Hilbert curve libraries. V 1.01 of the hilbertcurve Python library was published March 3, 2019. The initial seeds of this project started November 2019. </p>
+            <p>Originally I had envisioned much more for this project. Complete and thorough descriptions, more nifty graphs, a much more cleaner interface... But so much time has elapsed since the beginning of this project that at this point a complete project is better than an unrealized ideal.</p>
+        </div>
+    </div>
 {% endblock %}

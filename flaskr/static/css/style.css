@@ -2,11 +2,12 @@ html, body {
     min-height: 100%;
     position: relative;
     margin: 0;
-    font-family: sans-serif;
+    font-family: Helvetica;
+    color:#404040;
 }
 
 body {
-    width: 70%;
+    width: 100%;
     margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -16,10 +17,105 @@ body {
 h1, h3{
     text-align: center;
 }
+#header{
+    color: #979797;
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 25px;
+    padding-left: 5%;
+    padding-bottom: 25px;
+    margin: 0;
+}
+
+@media screen and (max-width: 680px) {
+    #header{
+        z-index:10;
+        background-color: rgba(255,255,255,0.8);
+    }
+}
+
+.title{
+    font-weight: 100;
+    text-align: center;
+    display: block;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size:2em;
+    margin-top:20px;
+}
+
+.subtitle{
+    font-weight: 100;
+    text-align: center;
+    display: block;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size:1.5em;
+    margin-top:60px;
+}
+
 .content {
     flex: 1 0 auto;
     margin: 0 auto;
     width: 400px;
+}
+
+.index-container {
+  justify-content: center;
+  height: max-content;
+  width: 1024px;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: row;
+}
+.index-container .index-left {
+  width: 240px;
+}
+.index-container .index-middle {
+  max-width: 784px;
+  flex: 1;
+  margin-top: 0px;
+}
+@media screen and (max-width: 1180px) {
+    .index-container {
+        left: 0;
+        width: 95%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+    }
+
+  .index-container .index-middle {
+    flex: 1;
+    max-width: calc(100% - 180px);
+  }
+}
+
+@media screen and (max-width: 680px) {
+    .index-container {
+        width: 100%;
+        box-sizing: border-box;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0 25px 0 25px;
+        min-height: 0;
+    }
+
+    .index-container .index-left {
+        width: 100%;
+    }
+
+    .index-container .index-middle {
+        max-width: 100%;
+        margin-top: 10px;
+        flex: 1;
+    }
 }
 
 .chart {
@@ -55,12 +151,37 @@ form {
 #content {
 }
 
-#footer {
-    color: #979797;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    overflow: hidden;
+#footer{
     text-align: center;
+    position: absolute;
+    height: 2.5rem;
+    width: 95%;
+  display: flex;
+  flex-direction: row;
+  color: #979797;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+#footer .footer-left{
+  width:240px;
+}
+
+#footer .footer-right{
+  align-items: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 784px;
+}
+
+@media screen and (max-width: 680px) {
+    #footer {
+        box-sizing: border-box;
+        padding-left: 20px;
+    }
+
+    #footer .footer-left {
+        width: 0px;
+    }
 }

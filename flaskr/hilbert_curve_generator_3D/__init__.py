@@ -34,7 +34,7 @@ class HilbertCurveGenerator_3D:
 
         if type(base_array) == str:
             base_array = np.array(list(base_array))
-            # use idx to lookup reorder opperation to perform of base_array
+            # use idx to lookup reorder operation to perform of base_array
             for idx, quad in enumerate(base_array):
                 reorder_array = self.recurrence_matrix[idx]
                 reordered_base = base_array[reorder_array]

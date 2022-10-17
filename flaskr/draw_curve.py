@@ -48,7 +48,7 @@ def draw_curve(sequence):
                 mode='lines+markers',
                 marker=dict(
                     size=25-(step*3),
-                    color=x_vals,
+                    color=list(range(len(hc_seq))),
                     colorscale='Viridis'),
                 line=dict(
                     color='#677193',

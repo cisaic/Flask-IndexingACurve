@@ -32,7 +32,7 @@ def draw_hilbert3D(dim, level):
             mode='lines',
             text=hc_seq,
             line=dict(
-                color=df['z'],
+                color=list(range(len(hc_seq))),
                 colorscale='Sunset_r',
                 width=5),
         )
@@ -92,7 +92,7 @@ def step_hilbert3D(dim, level):
                 mode='lines+markers',
                 marker=dict(
                     size=7,
-                    color=x_vals,
+                    color=list(range(len(hc_seq))),
                     colorscale='Viridis'),
                 line=dict(
                     color='#677193',

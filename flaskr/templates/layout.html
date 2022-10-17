@@ -9,12 +9,19 @@
     {% endblock %}
   </head>
   <body>
+    <div id="header">
+        <a href="https://www.isaicu.ca">&#8592; Back to main site</a>
+    </div>
     <div id="content">{% block content %}{% endblock %}</div>
-    <p id="footer">
-      {% block footer %}
-      &copy; Copyright 2020 @<a href="http://domain.invalid/">me</a>
-      {% endblock %}
-    </p>
+    <div id="footer">
+        <div class="footer-left"></div>
+        <div class="footer-right">
+            <p>
+              {% block footer %}
+              / created using Flask / <a href="https://www.isaicu.ca"> cisaicu</a> / Nov 2019 - Nov 2022 /
+              {% endblock %}
+            </p>
+        </div>
     </div>
   </body>
 </html>
