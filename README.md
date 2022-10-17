@@ -50,6 +50,7 @@ Why hilbert curve and not z curve or smth? Because hilbert has locality preserva
 23. start with sample 2d slider
 
 ##2021
+
 24. Figured out how to get color gradient to follow sequential order 
     - the "color" attribute in fig.add_trace takes a list of values. 
     - Originally, I was inputting the list of x-coordinates for each sequential point along the hilbert curve
