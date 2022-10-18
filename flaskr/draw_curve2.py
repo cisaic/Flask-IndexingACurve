@@ -151,6 +151,7 @@ def step_hilbert3D(dim, level):
         title="3D Hilbert curve",
         sliders=sliders,
         height=800,
+        width=1000,
         scene=dict(xaxis_showspikes=False,
                    yaxis_showspikes=False,
                    zaxis_showspikes=False,
