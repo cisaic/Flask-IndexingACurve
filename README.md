@@ -77,10 +77,21 @@ Why hilbert curve and not z curve or smth? Because hilbert has locality preserva
 - generate necessary csv/json for sample graphs
 - comment code! clean up! standardize naming!!!
 
-# Instructions
+# Instructions for Pythonanywhere
+
+- [YouTube tutorial](https://www.youtube.com/watch?v=5jbdkOlf4cY) for running app on pythonanywhere
+- Pull code from repository in [web bash console](https://www.pythonanywhere.com/user/cisaic/consoles/25966413/)
+- Make sure to go back into draw_curve2.py and edit the csv file paths after pulling code
 
 - If later on, you wish to install this same set of dependencies again, you can install them from this file with the following command:
 pip install -r requirements.txt
 - To make changes on pythonanywhere, need to go to bash console on the webstie cisaic_pythonanywhere_com_wsgi.py & do a git pull
+- Solved import error (module not found): made sure dir path went into /flaskr in the web [wsgi.py file](https://www.pythonanywhere.com/user/cisaic/files/var/www/cisaic_pythonanywhere_com_wsgi.py?edit) 
+- Solved error (module object not collable): made sure app import function in wsgi.py file was:
+> from app import app as application 
 
+not 
+> from flaskr import app as application
 
+- Other common issues: csv file not found: manually changed file path for hilbert-seq-L3.csv in draw_curve2.py using web editor to absolute path '/home/cisaic/Flask-IndexingACurve/flaskr/hilbert_points.csv'
+- Need to be careful when pushing to 
