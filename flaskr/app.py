@@ -1,9 +1,3 @@
-import sys
-
-path = '/home/cisaic/Flask-IndexingACurve/flaskr'
-if path not in sys.path:
-    sys.path.append(path)
-
 from flask import Flask, render_template, request
 import draw_curve as dc
 import draw_curve2 as dc2
