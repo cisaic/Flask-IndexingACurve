@@ -76,3 +76,8 @@ Why hilbert curve and not z curve or smth? Because hilbert has locality preserva
 - point on nxm graph with z-curve (or some other orthant-order-sequence) (?)
 - generate necessary csv/json for sample graphs
 - comment code! clean up! standardize naming!!!
+
+# Instructions
+
+If later on, you wish to install this same set of dependencies again, you can install them from this file with the following command:
+pip install -r requirements.txt
