@@ -79,5 +79,8 @@ Why hilbert curve and not z curve or smth? Because hilbert has locality preserva
 
 # Instructions
 
-If later on, you wish to install this same set of dependencies again, you can install them from this file with the following command:
+- If later on, you wish to install this same set of dependencies again, you can install them from this file with the following command:
 pip install -r requirements.txt
+- To make changes on pythonanywhere, need to go to bash console on the webstie cisaic_pythonanywhere_com_wsgi.py & do a git pull
+
+
